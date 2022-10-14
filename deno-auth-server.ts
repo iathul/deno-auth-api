@@ -83,9 +83,9 @@ const PORT   = 8080;
 router
     .post("/register", registerUser)
     .post("/login",    loginUser)
-    .get("/getallusers",   getAllUsers)
+    .get("/users",   getAllUsers)
 
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-await app.listen({ port: 8080 });
+await app.listen({ port: PORT });
